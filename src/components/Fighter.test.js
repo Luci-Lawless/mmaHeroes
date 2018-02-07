@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './App.css';
-import FightersContainer from './containers/FightersContainer'
+import React from 'react';
+import { shallow } from 'enzyme';
+import Fighter from './Fighter'
 
 const fighters = [
   {
@@ -357,14 +357,15 @@ const fighters = [
   },
 ]
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <FightersContainer fighters={ fighters } />
-      </div>
-    );
-  }
-}
+describe('<Fighters />', () =>{
+  const container = shallow(<Fighter { ...fighters } />)
 
-export default App;
+  it('is wrapped in a article tag with class name "fighter"', () => {
+    expect(container).toHaveTagName('article')
+    expect(container).toHaveClassName('fighter')
+  });
+
+  it('shows the correspondent icon for Pride organization', () => {
+    expect(container === '<img src="http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_50/a_38/v1518021555/1393300992_014_ek7ifr.ico" />')
+  })
+})
