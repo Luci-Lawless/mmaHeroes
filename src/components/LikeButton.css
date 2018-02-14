@@ -1,19 +1,21 @@
-.LikeButton button {
+.LikeButton
+
+button {
   border: 0;
   background: transparent;
   outline: none;
   font-size: 1.5em; }
 
-.LikeButton button .heart {
+.heart {
   width: 1em; }
 
-.LikeButton button span.copy {
+span.copy {
   position: absolute;
   margin-left: -1em;
   z-index: -1;
   opacity: 0; }
 
-.LikeButton .likes {
+.likes {
   font-size: 0.8em;
   color: #999; }
 

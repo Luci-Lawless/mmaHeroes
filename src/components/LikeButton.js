@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import HeartGrey from '../img/heart-grey.svg';
 import HeartRed from '../img/heart-red.svg';
-import './LikeButton.sass';
+import './LikeButton.css';
 
 class LikeButton extends PureComponent {
   state = { liked: false }
