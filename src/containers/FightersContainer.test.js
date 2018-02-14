@@ -368,7 +368,7 @@ describe('<FightersContainer />', () =>{
   })
 
   it('set the Title to "MMA Heroes"', () => {
-    expect(container).toContainReact(<Title content="MMA Heroes" />)
+    expect(container).toContainReact(<Title content="Mixed Martial Arts Heroes" />)
   })
 
   it('renders all fighters as a Fighter', () => {

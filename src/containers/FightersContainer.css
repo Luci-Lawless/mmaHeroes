@@ -1,0 +1,24 @@
+.FightersContainer {
+  margin: 0 auto;
+  width: 100%; }
+  .FightersContainer main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 1025px) {
+      .FightersContainer main {
+        max-width: 1260px;
+        flex-flow: row wrap; } }
+    @media (min-width: 769px) {
+      .FightersContainer main {
+        flex-flow: row wrap; } }
+  .FightersContainer > header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    flex: 1 100%; }
+    @media (min-width: 1025px) {
+      .FightersContainer > header {
+        max-width: 1260px; }
+        .FightersContainer > header h1 {
+          padding: 0 30px; } }

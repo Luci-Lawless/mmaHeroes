@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
 import FightersContainer from './containers/FightersContainer'
 
 const fighters = [
   {
+    _id:'1',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518109539/011216-ufc-on-fuel-tv-wanderlei-silva-pi-ch-vresize-1200-675-high-82_drnc9s.jpg",
     name: 'Wanderlei Silva',
     country: 'Brazil',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016755/Brazil-Flag-icon_pqlyjq.ico",
@@ -18,9 +19,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: true,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'2',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518610513/royce-gracie2_gssbiq.jpg",
     name: 'Royce Gracie',
     country: 'Brazil',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016755/Brazil-Flag-icon_pqlyjq.ico",
@@ -37,8 +41,11 @@ const fighters = [
     wec: false,
     bellator: true,
     pancrase: false,
+    liked: false
   },
   {
+    _id:'3',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518610719/Kazushi_Sakuraba.0.0_stbs0l.jpg",
     name: 'Kazushi Sakuraba',
     country:'Japan',
     flag: "http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016833/Japan-Flag-icon_mslgki.ico",
@@ -55,9 +62,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'4',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518611091/images_gzjeyn.jpg",
     name:'Evan Tanner',
     country:'United States',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016864/United-States-Flag-icon_dhjm52.ico",
@@ -71,9 +81,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: true
+    pancrase: true,
+    liked: false
   },
   {
+    _id:'5',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518611163/Matt-Hughes-107-UFC-117-750-750x368_jmvyz2.jpg",
     name: 'Matt Hughes',
     country:'United States',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016864/United-States-Flag-icon_dhjm52.ico",
@@ -92,8 +105,11 @@ const fighters = [
     wec: false,
     bellator: false,
     pancrase: false,
+    liked: false
   },
   {
+    _id:'6',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518611294/silvia-ufc-fight-left-in-him-2017-e1b8803c-fa10-4450-8b11-1768fe922bb5_z12eqs.jpg",
     name: 'Anderson Silva',
     country:'Brazil',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016755/Brazil-Flag-icon_pqlyjq.ico",
@@ -106,9 +122,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase:false
+    pancrase:false,
+    liked: false
   },
   {
+    _id:'7',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518611442/052215-UFC-20-Bas-Rutten-PI-CH.vresize.1200.675.high_.7_tyqtp1.jpg",
     name: 'Bas Rutten',
     country:'Netherlands',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016902/Netherlands-Flag_jrsdow.ico",
@@ -125,9 +144,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: true
+    pancrase: true,
+    liked: false
   },
   {
+    _id:'8',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518611504/marco-ruas-size-620_ijut1a.jpg",
     name: 'Marco Ruas',
     country:'Brazil',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016755/Brazil-Flag-icon_pqlyjq.ico",
@@ -144,9 +166,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'9',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518611569/cris-cyborg-justino-052317-getty-ftrjpg_kpvln4iylkr919vqm0hf53gvv_szlnko.jpg",
     name: 'Cris Cyborg',
     country:'Brazil',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016755/Brazil-Flag-icon_pqlyjq.ico",
@@ -161,9 +186,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'10',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518611623/georges_st-pierre_psv4xs.jpg",
     name: 'Georges St-Pierre',
     country:'Canada',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518020796/Canada-Flag_vfhciy.ico",
@@ -184,9 +212,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'11',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518611687/antonio-rodrigo-nogueira-ufc-190_rxtxhs.jpg",
     name: 'Antonio Rodrigo Nogueira',
     country:'Brazil',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016755/Brazil-Flag-icon_pqlyjq.ico",
@@ -202,9 +233,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'12',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518611809/Fedor-Emelianenko_tggw5j.jpg",
     name: 'Fedor Emelianenko',
     country:'Russia',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016962/Russia-Flag-icon_gjnu0c.ico",
@@ -218,9 +252,12 @@ const fighters = [
     ufc: false,
     wec: false,
     bellator: true,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'13',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518611911/301_Fabricio_Werdum_vs_Stipe_Miocic.0.0_vgs0ij.jpg",
     name: 'Fabricio Werdum',
     country:'Brazil',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016755/Brazil-Flag-icon_pqlyjq.ico",
@@ -236,9 +273,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'14',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518612001/usa_today_8994162.0_sbmzou.jpg",
     name: 'Jose Aldo Junior',
     country:'Brazil',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016755/Brazil-Flag-icon_pqlyjq.ico",
@@ -252,9 +292,12 @@ const fighters = [
     ufc: true,
     wec: true,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'15',
+    photo:"https://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518612238/BEST-fb-template-214_xr1u7n.jpg",
     name: 'Kazuyuki Fujita',
     country:'Japan',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016833/Japan-Flag-icon_mslgki.ico",
@@ -267,9 +310,12 @@ const fighters = [
     ufc: false,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'16',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518612286/chuckliddell_iwdsqw.jpg",
     name: 'Chuck Liddell',
     country:'United States',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016864/United-States-Flag-icon_dhjm52.ico",
@@ -283,9 +329,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'17',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518612346/GYI0061425024_rrsvmh.jpg",
     name: 'Randy Couture',
     country:'United States',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016864/United-States-Flag-icon_dhjm52.ico",
@@ -301,9 +350,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'18',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518612459/180_Dan_Henderson_vs_Hector_Lombard.0.0_fvhraj.jpg",
     name: 'Dan Henderson',
     country:'United States',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016864/United-States-Flag-icon_dhjm52.ico",
@@ -320,9 +372,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'19',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518612519/1517562543727_xtil4k.jpg",
     name: 'Mark Hunt',
     country: 'New Zealand',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518017142/New-Zealand-Flag-icon_vpbzcn.ico",
@@ -336,9 +391,12 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: false
+    pancrase: false,
+    liked: false
   },
   {
+    _id:'20',
+    photo:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_500/v1518612616/crocop450_nprptw.jpg",
     name: 'Mirko Cro Cop',
     country:'Croatia',
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016930/Croatian-Flag_rucpmp.ico",
@@ -353,12 +411,21 @@ const fighters = [
     ufc: true,
     wec: false,
     bellator: false,
-    pancrase: true
+    pancrase: true,
+    liked: false
   },
 ]
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state ={
+      fighters: fighters
+    }
+  }
+
   render() {
+    const { fighters } = this.state
     return (
       <div className="App">
         <FightersContainer fighters={ fighters } />
