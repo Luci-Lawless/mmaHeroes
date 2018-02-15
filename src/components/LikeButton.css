@@ -1,5 +1,3 @@
-.LikeButton
-
 button {
   border: 0;
   background: transparent;
@@ -19,7 +17,7 @@ span.copy {
   font-size: 0.8em;
   color: #999; }
 
-.LikeButton.liked button span.copy {
+.liked button span.copy {
   z-index: 9;
   animation: heart 1s 1 ease-in-out; }
 
