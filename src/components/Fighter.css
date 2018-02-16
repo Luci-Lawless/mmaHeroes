@@ -34,3 +34,6 @@ article.fighter {
       height: 500px; }
   article.fighter header h1 {
     margin: 20px 0; }
+  article.fighter .organizations {
+    margin: -60px 20px 0 0;
+    float: right; }

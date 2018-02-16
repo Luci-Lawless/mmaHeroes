@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FightersContainer from './containers/FightersContainer'
 
 const fighters = [
@@ -92,11 +92,11 @@ const fighters = [
     flag:"http://res.cloudinary.com/di7m4tijz/image/upload/c_scale,w_30/v1518016864/United-States-Flag-icon_dhjm52.ico",
     bio:'Matthew Allen Hughes (born October 13, 1973), is a retired American mixed martial artist with a\
      background in wrestling. He is a two-time UFC Welterweight Champion, UFC Hall of Fame inductee, and NJCAA\
-     Hall of Fame inductee.[5] During his tenures in the Ultimate Fighting Championship, Hughes put together two\
+     Hall of Fame inductee. During his tenures in the Ultimate Fighting Championship, Hughes put together two\
      separate six-fight winning streaks, defeated all the available opposition in the welterweight division, and\
      defended the belt a then-record seven times. Hughes was inducted into the UFC Hall of Fame in May 2010 during\
      the UFC Fan Expo in conjunction with UFC 114. During his reign, Hughes was widely considered the #1\
-     pound-for-pound mixed martial artist in the world.[9] Hughes was also regarded by many analysts and several\
+     pound-for-pound mixed martial artist in the world. Hughes was also regarded by many analysts and several\
      media outlets as one of the greatest welterweight fighters of all time, as well as one of the greatest pound\
      -for-pound fighters in the sport'+ "'" +'s history.',
     pride: false,
@@ -416,7 +416,7 @@ const fighters = [
   },
 ]
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super()
     this.state ={

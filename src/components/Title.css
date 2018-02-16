@@ -5,11 +5,9 @@
   padding: 10px 2em;
   margin: 0;
   color: #4e4e4e;
-  background-image: url('http://res.cloudinary.com/di7m4tijz/image/upload/v1518111503/blood_PNG6159_dnkaqw.png');
+  background-image: url("http://res.cloudinary.com/di7m4tijz/image/upload/v1518111503/blood_PNG6159_dnkaqw.png");
   background-attachment: fixed;
-  background-repeat: no-repeat;
- }
-  .Title.level-2 {
+  background-repeat: no-repeat; }
+  .Title .Title.level-2 {
     font-size: 1.5em;
-    padding: 0;
-   }
+    padding: 0; }

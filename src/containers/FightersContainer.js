@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import Title from '../components/Title';
 import Fighter from '../components/Fighter';
-import './FightersContainer.sass';
+import './FightersContainer.css';
+import FighterEditor from '../components/FighterEditor';
 
 class FightersContainer extends PureComponent {
   renderFighter(fighter, index) {
@@ -10,7 +11,8 @@ class FightersContainer extends PureComponent {
 
   render() {
     return(
-      <div className="fighters wrapper">
+      <div className="FightersContainer">
+        <FighterEditor />
         <header>
           <Title content="Mixed Martial Arts Heroes" />
         </header>

@@ -1,0 +1,46 @@
+li.Organizations {
+  list-style: none;
+  position: relative;
+  display:inline-block;
+  margin-top: 60px;
+  border: 1px solid #cccccc;
+  height: 1.8em;
+  text-align: center;
+  border-radius: 1.8em;
+  padding: 5px;
+  line-height: 1.5em;
+  min-width: 1.8em;}
+  li.Organizations span {
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    text-indent: 30em;
+    transition: text-indent 0.8s ease-out; }
+  li.Organizations img {
+    margin: 5px 0;
+    height: 1em; }
+  li.Organizations:hover span {
+    text-indent: 0;
+    width: 6em; }
+  li.Organizations:hover img {
+    margin: 5px 0 5px 10px; }
+  li.Organizations.ufc {
+    border-color: #d32f2f;
+    color: #d32f2f; }
+  li.Organizations.pancrase {
+    border-color: #F6A623;
+    color: #F6A623; }
+  li.Organizations.strikeforce {
+    border-color: #417505;
+    color: #417505; }
+  li.Organizations.wec {
+    border-color: #4990E2;
+    color: #4990E2; }
+  li.Organizations.bellator {
+    border-color: #343434;
+    color: #343434; }
+  li.Organizations.pride {
+    border-color: #d2d4d8;
+    color: #d2d4d8; }
