@@ -55,6 +55,12 @@ class FighterEditor extends PureComponent {
     })
   }
 
+  updateCountry(event) {
+    this.setState({
+      country: this.refs.country.value
+    })
+  }
+
   setOrganizations(event){
     this.setState({
       ufc: event.target.value === 'ufc',
@@ -69,8 +75,10 @@ class FighterEditor extends PureComponent {
   saveFighter() {
     const fighter = {
       ...this.state,
-      liked: false
+      liked: false,
     }
+    console.table(fighter)
+
     this.props.save(fighter)
   }
 
@@ -85,6 +93,17 @@ class FighterEditor extends PureComponent {
           defaultValue={this.state.name}
           onChange={this.updateName.bind(this)}
           onKeyUp={this.updateName.bind(this)} />
+        <br />
+
+        <input
+          type="text"
+          ref="country"
+          className="country"
+          placeholder="Country"
+          defaultValue={this.state.country}
+          onChange={this.updateCountry.bind(this)}
+          onKeyUp={this.updateCountry.bind(this)} />
+        <br />
 
         <Editor
           ref="bio"
@@ -105,7 +124,7 @@ class FighterEditor extends PureComponent {
           onKeyUp={this.updatePhoto.bind(this)} />
 
           {ORGANIZATIONS.map((organizations) => {
-            return <label key={organizations} htmlFor={organizations}>
+            return <label className="org" key={organizations} htmlFor={organizations}>
                 <input
                   id={organizations}
                   type="checkbox"
@@ -115,6 +134,7 @@ class FighterEditor extends PureComponent {
                 {organizations}
               </label>
           })}
+          <br />
           <div className="actions">
             <button className="primary" onClick={this.saveFighter.bind(this)}>Save</button>
           </div>

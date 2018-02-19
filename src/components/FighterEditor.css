@@ -6,13 +6,14 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   border-radius: .5em;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.117647), 0 1px 4px rgba(0, 0, 0, 0.117647);
   background-color: #fff;
   margin: 1em .8em;
   padding: 1em;}
 
-  .title, .photo {
+  .name, .photo, .country {
     font-size: 1.2em;
     border: none;
     margin-bottom: 0.5em;}
@@ -20,17 +21,20 @@
     &:focus {
       outline: none;}
 
-  .title
-    font-size: 2em;
+  .name, .country {
+    font-size: 1.2em;}
 
-  .actions
+  .actions button {
     margin-top: 1em;
 
-  button {
     border: 1px solid #333;
     font-size: 1.2em;
     padding: .2em .3em;
-    background-color: #fff;}
+    background-color: #dcd9e2;}
 
-    &:hover {
-      background-color: #eee;}
+   .actions button:hover {
+     background-color: #eee;}
+
+  .org {
+    display: inline-block;
+  }
